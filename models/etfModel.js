@@ -19,11 +19,47 @@ module.exports = (sequelize, DataTypes) => {
         price: {
             type: DataTypes.INTEGER,
             allowNull: false
-        }
+        },
+        assetClass: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        }, 
+        expenseRatio: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        change: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        SEC_yield: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        YTD: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        oneYear: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        fiveYear: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        tenYear: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        sinceInception: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
     });
 
     return ETF
-}
+};
 
 
 
