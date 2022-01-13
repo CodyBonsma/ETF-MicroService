@@ -1,4 +1,7 @@
+
 module.exports = (sequelize, DataTypes) => {
+
+const Holding = require('./holdingModel');
 
 
     const ETF = sequelize.define('ETF', {
@@ -57,6 +60,8 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
         },
     });
+
+    
 
     return ETF
 };

@@ -28,7 +28,18 @@ db.sequelize = sequelize;
 
 // get ETF model 
 db.ETF = require('./etfModel')(sequelize, DataTypes);
+const ETF = require('./etfModel');
+
 db.Holdings = require('./holdingModel')(sequelize, DataTypes);
+const Holding = require('./holdingModel');
+
+// ETF.associate = function(){
+//     ETF.belongsToMany(Holding)
+// };
+
+// Holding.associate = function(){
+//     Holding.hasOne(ETF)
+// }
 
 // sync the db by running the model
 // 'force: false' ensures that the table is not created again everytime the program runs
@@ -37,5 +48,8 @@ db.sequelize.sync({force: true}).then(() => {
 }).catch((err) => {
     console.log('Error syncing the DB to sequelize' + err)
 });
+
+db.ETF.belongsToMany(db.Holdings, {through: db.Holdings});
+db.Holdings.belongsTo(db.ETF);
 
 module.exports = db;

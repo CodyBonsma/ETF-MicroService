@@ -20,14 +20,14 @@ const addHolding = async (req, res) => {
 };
 
 const getAllHoldings = async (req, res) => {
-    let holdings = await Holding.findAll({});
+    let holdings = await Holding.findAll({include: db.ETF});
     res.status(200).send(holdings);
 };
 
 const getOneHolding = async (req, res) => {
     let id = req.params.id;
 
-    let holding = await Holding.findOne({where: {id: id}});
+    let holding = await Holding.findOne({where: {id: id}, include: db.ETF});
     res.status(200).send(holding);
 };
 

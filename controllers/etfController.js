@@ -25,7 +25,7 @@ const addETF = async (req, res) => {
 };
 
 const getAllETFs = async (req, res) => {
-    let etfs = await ETF.findAll({});
+    let etfs = await ETF.findAll({include: db.Holdings});
     res.status(200).send(etfs);
 };
 
