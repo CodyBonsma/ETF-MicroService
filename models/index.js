@@ -28,6 +28,7 @@ db.sequelize = sequelize;
 
 // get ETF model 
 db.ETF = require('./etfModel')(sequelize, DataTypes);
+db.Holdings = require('./holdingModel')(sequelize, DataTypes);
 
 // sync the db by running the model
 // 'force: false' ensures that the table is not created again everytime the program runs
