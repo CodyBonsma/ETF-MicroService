@@ -2,8 +2,8 @@ FROM node:latest
 
 WORKDIR /usr/src/www
 
-COPY package.json./
-COPY package-lock.json./
+COPY package.json ./
+COPY package-lock.json ./
 
 RUN npm install
 
