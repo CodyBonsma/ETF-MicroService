@@ -13,6 +13,9 @@ app.use('/etfs', ETFrouters);
 const holdingRouters = require('./routes/holdingRouter');
 app.use('/holdings', holdingRouters);
 
+const userRouters = require('./routes/userRouter');
+app.use('/users', userRouters);
+
 app.get('/', (req,res) => {
     res.send('Hello World!')
 });
