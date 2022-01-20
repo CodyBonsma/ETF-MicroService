@@ -1,7 +1,7 @@
 
 module.exports = (sequelize, DataTypes) => {
 
-const Holding = require('./holdingModel');
+// const Holding = require('./holdingModel');
 
 
     const ETF = sequelize.define('ETF', {

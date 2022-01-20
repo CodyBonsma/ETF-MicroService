@@ -6,9 +6,9 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             primaryKey: true
         },
-        numPurchased: {
-            type: DataTypes.INTEGER,
-            allowNull: false
+        name: {
+            type: DataTypes.STRING,
+            allowNull: true
         }
     });
 
