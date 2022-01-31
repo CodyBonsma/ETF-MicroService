@@ -76,7 +76,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
         },
         investment_strategy: {
-            type: DataTypes.FLOAT,
+            type: DataTypes.STRING,
             allowNull: true,
         },
         fund_yield: {
