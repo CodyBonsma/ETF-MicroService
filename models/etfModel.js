@@ -11,54 +11,98 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             primaryKey: true
         },
-        name: {
+        fund_symbol: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
-        ticker: {
+        fund_long_name: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
-        price: {
-            type: DataTypes.FLOAT,
-            allowNull: false
+        fund_category: {
+            type: DataTypes.STRING,
+            allowNull: true
         },
-        assetClass: {
+        fund_family: {
             type: DataTypes.STRING,
             allowNull: true
         }, 
-        expenseRatio: {
-            type: DataTypes.FLOAT,
+        exchange_code: {
+            type: DataTypes.STRING,
             allowNull: true
         },
-        change: {
-            type: DataTypes.FLOAT,
+        exchange_name: {
+            type: DataTypes.STRING,
             allowNull: true
         },
-        SEC_yield: {
+        avg_vol_3month: {
             type: DataTypes.FLOAT,
             allowNull: true,
         },
-        YTD: {
+        avg_vol_10day: {
             type: DataTypes.FLOAT,
             allowNull: true,
         },
-        oneYear: {
+        total_net_assets: {
             type: DataTypes.FLOAT,
             allowNull: true,
         },
-        fiveYear: {
+        day50_moving_average: {
             type: DataTypes.FLOAT,
             allowNull: true,
         },
-        tenYear: {
+        week52_high: {
             type: DataTypes.FLOAT,
             allowNull: true,
         },
-        sinceInception: {
+        week52_high_change: {
             type: DataTypes.FLOAT,
             allowNull: true,
         },
+        week52_high_change_perc: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
+        },
+        week52_low: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
+        },
+        week52_low_change: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
+        },
+        week52_low_change_perc: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
+        },
+        investment_strategy: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
+        },
+        fund_yield: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
+        },
+        inception_date: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
+        },
+        fund_annual_report_net_expense_ratio: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
+        },
+        top10_holdings_total_assets: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
+        },
+        fund_return_ytd: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
+        },
+        category_return_ytd: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
+        }
     });
 
     
