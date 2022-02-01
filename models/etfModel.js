@@ -76,7 +76,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
         },
         investment_strategy: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(10000),
             allowNull: true,
         },
         fund_yield: {
@@ -84,7 +84,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: true,
         },
         inception_date: {
-            type: DataTypes.FLOAT,
+            type: DataTypes.STRING,
             allowNull: true,
         },
         fund_annual_report_net_expense_ratio: {
