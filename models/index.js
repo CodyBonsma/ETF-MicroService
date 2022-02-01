@@ -34,6 +34,9 @@ let sequelize = null;
                 require: true,
                 rejectUnauthorized: false
               }
+            },
+            define: {
+                timestamps: false
             }
         })
     }
