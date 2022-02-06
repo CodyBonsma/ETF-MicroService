@@ -105,7 +105,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         price: {
             type: DataTypes.FLOAT,
-            allowNull: TextTrackCueList
+            allowNull: true
         }
     });
 
