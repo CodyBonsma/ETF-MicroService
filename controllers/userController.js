@@ -1,6 +1,7 @@
 
 // require the db created in the index file
 // const { users } = require('../models/index');
+const { where } = require('sequelize/dist');
 const db = require('../models/index');
 
 // get the user model

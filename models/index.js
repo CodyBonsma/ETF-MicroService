@@ -71,6 +71,7 @@ db.sequelize.sync({force: true}).then(() => {
     console.log('Error syncing the DB to sequelize' + err)
 });
 
-db.ETF.belongsToMany(db.Holdings);
+db.ETF.belongsToMany(db.Users, {through: db.Holdings} );
+db.Users.hasMany(db.Holdings)
 
 module.exports = db;
