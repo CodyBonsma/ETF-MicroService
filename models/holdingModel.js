@@ -10,6 +10,14 @@ module.exports = (sequelize, DataTypes) => {
         numPurchased: {
             type: DataTypes.INTEGER,
             allowNull: false
+        },
+        userId: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        etfId: {
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
     });
 

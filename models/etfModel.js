@@ -102,6 +102,10 @@ module.exports = (sequelize, DataTypes) => {
         category_return_ytd: {
             type: DataTypes.FLOAT,
             allowNull: true,
+        },
+        price: {
+            type: DataTypes.FLOAT,
+            allowNull: true
         }
     });
 

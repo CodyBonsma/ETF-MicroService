@@ -65,13 +65,12 @@ db.Users = require('./userModel')(sequelize, DataTypes);
 
 // sync the db by running the model
 // 'force: false' ensures that the table is not created again everytime the program runs
-db.sequelize.sync({force: false}).then(() => {
+db.sequelize.sync({force: true}).then(() => {
     console.log('DB synced with sequelize')
 }).catch((err) => {
     console.log('Error syncing the DB to sequelize' + err)
 });
 
-db.ETF.belongsToMany(db.Holdings, {through: db.Holdings});
-db.Holdings.belongsTo(db.ETF);
+db.ETF.belongsToMany(db.Holdings);
 
 module.exports = db;
