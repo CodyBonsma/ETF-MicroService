@@ -7,10 +7,8 @@ const db = require('../models/index');
 const Holding = db.Holdings
 
 const addHolding = async (req, res) => {
-    console.log("POSTING THIS:", req.body)
-    let input_data = {
-        numPurchased: req.body.numPurchased
-    };
+    console.log("POSTING THIS:////////////////////////////////////////////////", req.body)
+    let input_data = req.body
 
     const holding = await Holding.create(input_data).catch((err) => {
         console.log("THIS IS THE ERRR", err);
@@ -25,10 +23,11 @@ const getAllHoldings = async (req, res) => {
 };
 
 const getOneHolding = async (req, res) => {
-    let id = req.params.id;
+    // let id = req.params.id;
+    console.log("USE THIS TO FIND////////////////////////////////", req.body)
 
-    let holding = await Holding.findOne({where: {id: id}, include: db.ETF});
-    res.status(200).send(holding);
+    // let holding = await Holding.findOne({where: {userId: id}, include: db.ETF});
+    // res.status(200).send(holding);
 };
 
 const updateHolding = async (req, res) => {
