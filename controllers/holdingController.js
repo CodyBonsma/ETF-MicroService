@@ -10,7 +10,7 @@ const addHolding = async (req, res) => {
     console.log("POSTING THIS:////////////////////////////////////////////////", req.body)
     let input_data = req.body
 
-    const holding = await Holding.create(input_data).catch((err) => {
+    const holding = await Holding.create(input_data.data).catch((err) => {
         console.log("THIS IS THE ERRR", err);
     });
 
@@ -18,7 +18,9 @@ const addHolding = async (req, res) => {
 };
 
 const getAllHoldings = async (req, res) => {
-    let holdings = await Holding.findAll({include: db.ETF});
+    console.log("DATA TO FIND SINGLE ETFS//////////////////////", req.params)
+    let holdings = await Holding.findAll({where: {userId: req.params.id}, include: db.ETF});
+    // let holdings = await Holding.findAll({include: db.ETF});
     res.status(200).send(holdings);
 };
 

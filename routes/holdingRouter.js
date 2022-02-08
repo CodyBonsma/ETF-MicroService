@@ -9,7 +9,7 @@ const router = require('express').Router()
 router.post('/', holdingController.addHolding);
 
 // access all holdings in the table
-router.get('/', holdingController.getAllHoldings);
+router.get('/:id', holdingController.getAllHoldings);
 
 // access one holding by id
 router.get('/:id', holdingController.getOneHolding);

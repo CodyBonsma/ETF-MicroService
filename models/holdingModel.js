@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        etfId: {
+        ETFId: {
             type: DataTypes.INTEGER,
             allowNull: false
         }
